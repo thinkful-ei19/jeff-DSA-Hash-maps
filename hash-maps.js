@@ -30,9 +30,8 @@ class HashMap {
 
     _findSlot(key) {
         const hash = HashMap._hashString(key);
-        console.log(hash)
         const start = hash % this._capacity;
-            console.log(hash)
+
         for (let i = start; i < start + this._capacity; i++) {
             const index = i % this._capacity;
             const slot = this._slots[index];
